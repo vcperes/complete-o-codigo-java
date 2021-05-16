@@ -1,5 +1,6 @@
 package br.com.felixgilioli.exercicios.facil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,6 +16,10 @@ public class ArrayLists {
      * @return lista de inteiros apenas com números impares.
      */
     public static List<Integer> getImpares(List<Integer> numeros) {
+        ArrayList<Integer> numerosImpares = new ArrayList<Integer>();
+        for(Integer numero : numeros){
+           // if(numero)
+        }
         return numeros;
     }
 
