@@ -19,7 +19,7 @@ public class BigDecimals {
      */
     public static BigDecimal getValorComBaseNoPercentual(BigDecimal valor, BigDecimal percentual) {
 
-      //  if(valor)
-        return null;
+        BigDecimal percentualDividido = percentual.divide(new BigDecimal("100"));
+        return valor.multiply(percentualDividido);
     }
 }
