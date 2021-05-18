@@ -16,11 +16,14 @@ public class ArrayLists {
      * @return lista de inteiros apenas com números impares.
      */
     public static List<Integer> getImpares(List<Integer> numeros) {
-        ArrayList<Integer> numerosImpares = new ArrayList<Integer>();
-        for(Integer numero : numeros){
-           // if(numero)
-        }
-        return numeros;
+        ArrayList<Integer> impares = new ArrayList<Integer>();
+
+            for (Integer numero : numeros) {
+                if (numero % 2 == 1) {
+                    impares.add(numero);
+                }
+            }
+        return impares;
     }
 
     /**
@@ -30,6 +33,12 @@ public class ArrayLists {
      * @return quantidade de pessoas.
      */
     public static long getQuantidadeDePessoasQueComecamComALetra(List<String> pessoas, String letra) {
-        return 0;
+        long quantidadeDePessoas = 0;
+        for (String pessoa : pessoas){
+            if(pessoa.startsWith(letra)){
+                quantidadeDePessoas++;
+            }
+        }
+        return quantidadeDePessoas;
     }
 }

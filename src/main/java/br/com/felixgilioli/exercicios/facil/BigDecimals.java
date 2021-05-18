@@ -18,6 +18,8 @@ public class BigDecimals {
      * @return valor com base no percentual.
      */
     public static BigDecimal getValorComBaseNoPercentual(BigDecimal valor, BigDecimal percentual) {
+
+      //  if(valor)
         return null;
     }
 }
