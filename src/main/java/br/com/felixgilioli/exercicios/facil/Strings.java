@@ -19,7 +19,13 @@ public class Strings {
      * @return string truncada.
      */
     public static String getStringTruncada(String s, int tamanho) {
-        return null;
+        if(s==null){
+            return null;
+        }else if(s.length()>tamanho && 0 <= tamanho){
+            String truncada = s.substring(0,tamanho)+"...";
+            return truncada;
+        }
+        return s;
     }
 
     /**
@@ -29,6 +35,10 @@ public class Strings {
      * @return true se a string estiver em branco.
      */
     public static boolean isBlank(String s) {
+
+        if(s==null || s.isBlank()){
+            return true;
+        }
         return false;
     }
 

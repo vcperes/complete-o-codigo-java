@@ -33,6 +33,15 @@ public enum DiaDaSemanaEnum {
      * @return enum.
      */
     public static DiaDaSemanaEnum getEnumPelaDescricao(String descricao) {
+        DiaDaSemanaEnum novoDiaDaSemanaEnum;
+        for(DiaDaSemanaEnum diaDaSemanaEnum1 : DiaDaSemanaEnum.values()){
+            if(diaDaSemanaEnum1.getDescricao()== descricao){
+                return diaDaSemanaEnum1;
+            }
+        }
+        if(descricao==null || descricao.isBlank()){
+            return null;
+        }
         throw new UnsupportedOperationException();
     }
 

@@ -2,6 +2,7 @@ package br.com.felixgilioli.exercicios.facil;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
 
 /**
@@ -18,19 +19,10 @@ public class LocalDates {
      * @return quantidade de dias entre as datas.
      */
     public static long getQuantidadeDeDiasEntreDatas(LocalDate inicio, LocalDate fim) {
-        Period intervalo = inicio.until(fim);
-        long dias= intervalo.getDays();
-        int anos= intervalo.getYears();
-        int meses= intervalo.getMonths();
-        if(anos==0)
-            anos=1;
-        if(meses==0)
-            meses=1;
-        if(dias==0)
-            dias=1;
-
-        anos = anos * 12;
-        meses = meses*30;
+        long dias = ChronoUnit.DAYS.between(inicio, fim);
+        if(dias < 0){
+            dias = -(dias);
+        }
         return dias;
     }
 }
