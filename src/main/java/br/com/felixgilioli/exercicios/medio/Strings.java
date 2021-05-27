@@ -2,6 +2,7 @@ package br.com.felixgilioli.exercicios.medio;
 
 import java.util.Locale;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Classe com métodos para trabalhar com Strings.
@@ -55,9 +56,15 @@ public class Strings {
          * @return inteiro informando a quantidade de caracteres especiais.
          */
         public static int getQuantidadeCaracteresEspeciais(String str) {
+            if(str ==null) {
+                return 0;
+            }
             int quant=0;
-            if(str.contains("usar expressao regular")){
-                quant++;
+            for(int i =0; i<str.length();i++){
+                String letra = String.valueOf(str.charAt(i));
+                if(letra.matches("[!@#$%)¨*(0¢+._]")){
+                    quant++;
+                }
             }
             return quant;
         }
