@@ -42,7 +42,7 @@ public enum DiaDaSemanaEnum {
         if(descricao==null || descricao.isBlank()){
             return null;
         }
-        throw new UnsupportedOperationException();
+      throw new UnsupportedOperationException();
     }
 
 }
